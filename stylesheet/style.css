@@ -1,0 +1,242 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del logo en el header */
+header .logo {
+    max-width: 100px; /* Limita el ancho del logo */
+}
+
+/* Estilos para los iconos de usuario y menú en el header */
+header .icons i {
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    margin-left: 15px;
+    color: #5a5a5a; /* Color gris oscuro para los iconos */
+}
+
+/* Alineación del texto del slider */
+.carousel-caption {
+    display: flex;
+    position: absolute;
+    top: 59%;
+    left: 125px;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    padding-left: 20px; /* Espacio desde la izquierda para que no esté pegado al borde */
+}
+
+.carousel-caption h5 {
+    font-size: 40px;
+    font-weight: medium;
+    color: #fff;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 500px; /* Limitar el ancho del texto */
+    text-align: justify; /* Justificar el texto */
+}
+
+/* Estilos para la sección de descuentos */
+.descuentos {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.descuentos h2 {
+    font-size: 36px;
+    color: #4d3b97;
+    margin-bottom: 20px;
+}
+
+/* Breakpoints */
+@media (max-width: 768px) {
+    /* Estilos para tablet */
+    .descuentos h2 {
+        font-size: 28px;
+    }
+    /* Alineación del texto del slider */
+    .carousel-caption {
+    top: 50%;
+    left: 60px;
+    right: 0;
+    transform: translateY(-25%);
+    padding-left: 10px; /* Espacio desde la izquierda para que no esté pegado al borde */
+}
+
+.carousel-caption h5 {
+    font-size: 18px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    max-width:253px;/* Limitar el ancho del texto */
+}
+}
+
+@media (max-width: 576px) {
+    /* Estilos para celular */
+    .descuentos h2 {
+        font-size: 16px;
+    }
+    /* Alineación del texto del slider */
+    .carousel-caption {
+    top: 200%;
+    left: 300px;
+    right: 100px;
+    transform: translateY(-25%);
+    padding-left: 0px; /* Espacio desde la izquierda para que no esté pegado al borde */
+    }
+
+.carousel-caption h5 {
+    font-size: 12px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    max-width:150px;/* Limitar el ancho del texto */
+    }
+}
+
+/* Historia ArcoIris */
+
+.container-historia {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+.img-vertical {
+    width: 100%;
+    height: auto;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.texto-justificado {
+    text-align: justify;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center;    /* Centra los elementos */
+    }
+
+    .right-panel {
+        width: 100%; /* Asegura que el panel ocupe todo el ancho */
+    }
+
+    .img-vertical {
+        margin-top: 10px; /* Espacio entre el logo y la imagen */
+    }
+}
+
+/* Final Historia Arco Iris */
+
+
+
+
+/* FOOTER */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.footer-content .line {
+    flex: 1;
+    height: 2px;
+    background-color: #5D3F9D;
+}
+
+.footer-content img {
+    margin: 0 20px;
+    height: 80px;
+}
+
+.social-icons,
+.site-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a,
+.site-links a {
+    color: #5D3F9D;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 20px;
+}
+
+.social-icons a:hover,
+.site-links a:hover {
+    color: #7B64B4;
+}
+
+@media (max-width: 768px) {
+    .footer-botton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .footer-content .line {
+        display: none;
+    } */
+
+    .social-icons, .site-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer-botton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .footer-content .line {
+        display: none;
+    } */
+
+    .social-icons, .site-links {
+        flex-wrap: wrap;
+    }
+}
+ /* FIN de FOOTER */

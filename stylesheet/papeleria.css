@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: 'Urbanist', sans-serif; /* Fuente Urbanist para el cuerpo del texto */
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el título de la sección de productos */
+.section-title {
+    font-family: 'Lobster Two', cursive; /* Fuente Lobster Two para el título */
+    font-size: 2rem;
+    color: #951E64; /* Color marrón claro para el título */
+    background-color: #FFCFEA; /* Fondo amarillo pálido */
+    padding: 0.5em 0; /* Espaciado en el título */
+}
+
+/* Estilos del logo en el header */
+header .logo {
+    max-width: 100px; /* Limita el ancho del logo */
+}
+
+/* Estilos para los iconos de usuario y menú en el header */
+header .icons i {
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    margin-left: 15px;
+    color: #5a5a5a; /* Color gris oscuro para los iconos */
+}
+
+/* Estilos para la tarjeta del producto */
+.product-card {
+    position: relative; /* Permite posicionar elementos dentro de la tarjeta */
+    overflow: hidden; /* Oculta contenido que sobresalga */
+}
+
+/* Imagen del producto */
+.product-image {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    border-radius: 20px; /* Bordes redondeados en la imagen */
+    transition: transform 0.3s; /* Transición para el efecto de zoom en hover */
+}
+
+/* Efecto de zoom en la imagen al pasar el ratón por encima */
+.product-card:hover .product-image {
+    transform: scale(1.3); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+/* Contenedor de información que se muestra en hover */
+.product-info {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: table-column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: #f2f2f2; /* Color blanco para el texto */
+    text-align: center; /* Alineación centrada */
+    opacity: 0; /* Oculta el texto inicialmente */
+    transition: opacity 0.3s; /* Transición para mostrar el texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad al 50% */
+    padding: 30px;
+    border-radius: 20px; /* Bordes redondeados en el contenedor */
+}
+
+/* Muestra la información del producto cuando se pasa el ratón por encima */
+.product-card:hover .product-info {
+    opacity: 1; /* Hace visible el texto */
+    border-radius: 20px;
+}
+
+/* Estilo del título en la información del producto */
+.product-info h3 {
+    font-family: 'Lobster Two', cursive; /* Fuente Lobster Two para el título */
+    font-size: 1.2rem;
+}
+
+/* Estilo del texto en la información del producto */
+.product-info p {
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+/* Estilos responsivos para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para el título */
+    }
+    .product-info h3 {
+        font-size: 1rem; /* Reduce el tamaño del título del producto */
+    }
+    .product-info p {
+        font-size: 0.8rem; /* Reduce el tamaño de la descripción y el precio */
+    }
+}
+
+/* INICIO DE LA SECCON DEL BENTO GRIDS */
+
+.container-bento{
+    display: grid;
+    background-color: #f2f2f2;
+    background-image: url(/img/Fonto\ Iconos.png);
+    /* margin: 125px 50px; */
+    grid-template-columns: 1.5fr 2fr 1.5fr 2fr;
+    grid-template-rows: 10px 150px 150px 50px 200px 150px;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding: 50px 80px;
+}
+.caja{
+    border-radius: 40px;
+    padding: 35px;
+}
+
+.a{
+    background-color: #AFE9FF;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.b{
+    background-color: #FFCFEA;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.c{
+    background-color: #FEFFBE;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.d{
+    background-color: #B2F1A4;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+.foto-boligrafo{
+    display: flex;
+    justify-content: right;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.foto-perforadora{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.foto-casillero{
+    display: flex;
+    justify-content: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+.foto-estuchegato{
+    display: flex;
+    justify-content: right;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+.bento-titulo h3{
+    font-family: 'Lobster Two';
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.descripcion-bento{
+    width: 400px;
+}
+/* FIN DE LA SECCON DEL BENTO GRIDS */
+
+
+
+/* INICIO DE LA SECCON DE INFORMACION DE PEDIDOS */
+
+
+
+/* FIN DE LA SECCON DE INFORMACION DE PEDIDOS */
+
+
+
+/* INICIO DE LA SECCON DE UBICACION */
+.ubicacion{
+    background-image: url(/img/Fondo\ Ubicacion.png);
+    padding: 50px 0;
+}
+/* Título */
+.title {
+    font-family: 'Lobster Two', cursive;
+    color: #3A2073;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del video */
+.video-container {
+    position: relative;
+}
+
+.video {
+    width: 80%;
+    border-radius: 15px;
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    background-image: url(/img/iconos/icono\ play.png);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    padding: 24px;
+    cursor: pointer;
+}
+
+.instructions {
+    margin-top: 20px;
+}
+
+.instruction {
+    background-color: #3A2073;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.instruction-number {
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Ajustes responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+    .instruction-number {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* FIN DE LA SECCON DE UBICACION */
+
+/* FOOTER */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.footer-content .line {
+    flex: 1;
+    height: 2px;
+    background-color: #5D3F9D;
+}
+
+.footer-content img {
+    margin: 0 20px;
+    height: 80px;
+}
+
+.social-icons,
+.site-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a,
+.site-links a {
+    color: #5D3F9D;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-botton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .footer-content .line {
+        display: none;
+    } */
+
+    .social-icons, .site-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer-botton {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .footer-content .line {
+        display: none;
+    } */
+
+    .social-icons, .site-links {
+        flex-wrap: wrap;
+    }
+}
+ /* FIN de FOOTER */
